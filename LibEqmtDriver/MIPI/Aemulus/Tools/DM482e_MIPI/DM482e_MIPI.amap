@@ -1,0 +1,83 @@
+{
+  "$id": "1",
+  "version": "1.1",
+  "use": [
+    "DM482e_SysamapExample"
+  ],
+  "resources": null,
+  "pinMaps": [
+    {
+      "$id": "2",
+      "name": "P2",
+      "resourcemaps": [
+        {
+          "$id": "3",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "4",
+            "type": "alias",
+            "value": "DM482e_0_Ch2",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "5",
+      "name": "P0",
+      "resourcemaps": [
+        {
+          "$id": "6",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "7",
+            "type": "alias",
+            "value": "DM482e_0_Ch0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "8",
+      "name": "P1",
+      "resourcemaps": [
+        {
+          "$id": "9",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "10",
+            "type": "alias",
+            "value": "DM482e_0_Ch1",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "11",
+      "name": "DM01",
+      "resourcemaps": [
+        {
+          "$id": "12",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "13",
+            "type": "alias",
+            "value": "DM482e_0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    }
+  ],
+  "pinGroupMaps": null
+}

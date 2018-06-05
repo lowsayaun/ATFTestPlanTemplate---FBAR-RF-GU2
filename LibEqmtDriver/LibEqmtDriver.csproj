@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C58F571-2273-496A-8A86-52F062211206}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibEqmtDriver</RootNamespace>
+    <AssemblyName>LibEqmtDriver</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aemulus.Hardware.DM">
+      <HintPath>MIPI\Aemulus\Common\bin\X64\Aemulus.Hardware.DM.dll</HintPath>
+    </Reference>
+    <Reference Include="Aemulus.Hardware.DM.DM280e">
+      <HintPath>MIPI\Aemulus\Common\bin\X64\Aemulus.Hardware.DM.DM280e.dll</HintPath>
+    </Reference>
+    <Reference Include="Aemulus.Hardware.ResourceManager, Version=1.1.2.48, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>MIPI\Aemulus\Common\bin\Aemulus.Hardware.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Aemulus.Hardware.SMU.PXI">
+      <HintPath>SMU\Aemulus.Hardware.SMU.PXI.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa.Interop, Version=5.3.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\TestPlanDriver\bin\Debug\Ivi.Visa.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NationalInstruments.Common, Version=15.0.40.49154, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL" />
+    <Reference Include="NationalInstruments.DAQmx, Version=14.5.45.122, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=x86" />
+    <Reference Include="NationalInstruments.LabVIEW.Interop, Version=1.5.0.0, Culture=neutral, PublicKeyToken=daeb5dc76be4e32a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\National Instruments\Shared\LabVIEW Run-Time\2014\NationalInstruments.LabVIEW.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="NoiseFloorProcessing">
+      <HintPath>NF_VST\NoiseFloorProcessing\NoiseFloorProcessing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LibEqmtCommon.cs" />
+    <Compile Include="DCSource\DCDriver.cs" />
+    <Compile Include="DCSource\N6700B.cs" />
+    <Compile Include="DCSource\PS662xA.cs" />
+    <Compile Include="DC_1CH\DCDriver_1CH.cs" />
+    <Compile Include="DC_1CH\E3633A.cs" />
+    <Compile Include="DC_1CH\N6700B_1CH.cs" />
+    <Compile Include="MIPI\DM280e.cs" />
+    <Compile Include="MIPI\DM482e.cs" />
+    <Compile Include="MIPI\MiPiDriver.cs" />
+    <Compile Include="NA\naEnum.cs" />
+    <Compile Include="NA\Topaz.cs" />
+    <Compile Include="NA\ZNBT.cs" />
+    <Compile Include="NA\ENA.cs" />
+    <Compile Include="NA\NADriver.cs" />
+    <Compile Include="NoiseSource\NoiseSource.cs" />
+    <Compile Include="PowerSensor\E4417A.cs" />
+    <Compile Include="PowerSensor\PowerSensorDriver.cs" />
+    <Compile Include="PowerSensor\rsnrpz.cs" />
+    <Compile Include="PowerSensor\RSNRPZ11.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SigAnalyzer\E4440A.cs" />
+    <Compile Include="SigAnalyzer\Enum.cs" />
+    <Compile Include="SigAnalyzer\N9020A.cs" />
+    <Compile Include="SigAnalyzer\SADriver.cs" />
+    <Compile Include="SigGen\E8257D.cs" />
+    <Compile Include="SigGen\Enum.cs" />
+    <Compile Include="SigGen\N5182A.cs" />
+    <Compile Include="SigGen\SGDriver.cs" />
+    <Compile Include="SMU\Aemulus1340.cs" />
+    <Compile Include="SMU\AePxiSMU.cs" />
+    <Compile Include="SMU\KeithleySMU.cs" />
+    <Compile Include="SMU\niDCPower.cs" />
+    <Compile Include="SMU\niInteropCommon.cs" />
+    <Compile Include="SMU\NiPXISMU.cs" />
+    <Compile Include="SMU\PowerSupplyDriver.cs" />
+    <Compile Include="Switch\AemulusWofer.cs" />
+    <Compile Include="Switch\Agilent3499.cs" />
+    <Compile Include="Switch\NI6509.cs" />
+    <Compile Include="Switch\SwitchDriver.cs" />
+    <Compile Include="TuneableFilter\cKnL_D5BT.cs" />
+    <Compile Include="TuneableFilter\TuneFilterDriver.cs" />
+    <Compile Include="Utility\HiPerfTimer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibMath\LibMath.csproj">
+      <Project>{742693fd-91dc-44ff-92d5-2b037899a76f}</Project>
+      <Name>LibMath</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
